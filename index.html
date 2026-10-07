@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f6f4ef">
+<title>Luar de Arcoverde — Experiência Digital</title>
+<style>
+:root{--bg:#f6f4ef;--ink:#10221a;--muted:#6f7973;--green:#123e2d;--green2:#245d45;--lime:#b9cc9b;--sand:#d9c8a7;--white:#fff;--line:rgba(16,34,26,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}
+.container{width:min(1240px,calc(100% - 48px));margin:auto}.nav{position:fixed;z-index:50;top:0;left:0;right:0;border-bottom:1px solid rgba(16,34,26,.08);background:rgba(246,244,239,.78);backdrop-filter:blur(18px)}
+.navin{height:74px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:17px;font-weight:850;letter-spacing:-.045em}.logo small{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:block;margin-top:3px}.navright{display:flex;align-items:center;gap:28px;font-size:12px;color:var(--muted)}.pill{padding:12px 18px;border-radius:999px;background:var(--green);color:#fff;font-weight:750}
+.hero{min-height:100vh;padding:126px 0 50px;display:flex;align-items:center}.heroGrid{display:grid;grid-template-columns:.82fr 1.18fr;gap:55px;align-items:center}.kicker{font-size:10px;letter-spacing:.22em;text-transform:uppercase;font-weight:850;color:var(--green2)}h1{font-size:clamp(54px,7vw,102px);line-height:.87;letter-spacing:-.07em;margin:20px 0 28px;max-width:720px}.lead{font-size:18px;line-height:1.65;color:var(--muted);max-width:550px}.actions{display:flex;gap:10px;margin-top:32px;flex-wrap:wrap}.outline{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.aerial{height:690px;border-radius:38px;position:relative;overflow:hidden;box-shadow:0 45px 100px rgba(20,48,34,.18);background:#b9c7ad}.aerial:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.08),transparent 50%,rgba(8,27,18,.18));pointer-events:none}
+.scene{position:absolute;inset:-9%;transform:rotate(-10deg) scale(1.08);background:#9caf8c}.avenue{position:absolute;background:#d9d8d0;border:1px solid rgba(0,0,0,.06);box-shadow:inset 0 0 0 9px #eeeae0}.av1{height:92px;width:120%;left:-10%;top:46%}.av2{width:92px;height:120%;top:-10%;left:49%}.av3{height:52px;width:55%;right:-6%;top:18%;transform:rotate(30deg)}.plot{position:absolute;background:#78956e;border:2px solid rgba(255,255,255,.68);border-radius:3px}.bld{position:absolute;background:#f0eee7;border-radius:5px;box-shadow:0 7px 12px rgba(0,0,0,.2)}.bld:before{content:"";position:absolute;inset:5px;background:#a79376;clip-path:polygon(50% 0,100% 30%,86% 100%,12% 100%,0 30%)}.pool{position:absolute;background:#79b8ba;border:3px solid #e9e6dc;border-radius:3px}.tree{position:absolute;width:16px;height:16px;border-radius:50%;background:#315e3d;box-shadow:6px 4px 0 #49754d,-5px 6px 0 #3d6b45}
+.floatcard{position:absolute;z-index:4;background:rgba(255,255,255,.91);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.65);border-radius:18px;padding:15px 17px;box-shadow:0 16px 35px rgba(0,0,0,.13)}.fc1{left:24px;bottom:24px}.fc2{right:24px;top:24px}.floatcard b{display:block;font-size:13px}.floatcard span{font-size:11px;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:35px}.stat{padding:24px 18px;border-right:1px solid var(--line)}.stat:last-child{border:0}.stat b{font-size:22px;letter-spacing:-.04em}.stat span{display:block;color:var(--muted);font-size:11px;margin-top:5px}
+section{padding:120px 0}.dark{background:var(--green);color:#fff}.head{display:grid;grid-template-columns:1fr .65fr;gap:50px;align-items:end;margin-bottom:48px}h2{font-size:clamp(42px,5.5vw,74px);line-height:.95;letter-spacing:-.06em;margin:14px 0 0}.head p{color:var(--muted);line-height:1.7;margin:0}.dark .head p,.dark .kicker{color:#b9c9c0}
+.browser{background:#fff;border-radius:30px;overflow:hidden;box-shadow:0 30px 80px rgba(14,34,24,.14);border:1px solid var(--line)}.browserbar{height:48px;border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 18px;gap:7px}.dot{width:8px;height:8px;border-radius:50%;background:#d9d7d0}.address{margin:auto;background:#f4f3ef;border-radius:999px;width:45%;height:23px}.app{display:grid;grid-template-columns:270px 1fr;min-height:590px}.sidebar{padding:24px;border-right:1px solid var(--line);background:#fbfaf7}.sideTitle{font-size:11px;text-transform:uppercase;letter-spacing:.16em;color:var(--muted);margin-bottom:18px}.search{height:42px;border:1px solid var(--line);border-radius:12px;padding:12px;color:#8b928e;font-size:12px}.filters{margin-top:20px;display:grid;gap:9px}.filter{padding:12px;border-radius:11px;background:#f2f1ec;font-size:12px;display:flex;justify-content:space-between}.legend{margin-top:28px;font-size:11px;color:var(--muted);line-height:2}.legend i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:7px}.workspace{position:relative;overflow:hidden;background:#dfe3d6}.workspace .scene{inset:-18%;transform:rotate(-7deg) scale(1.03)}.lotFocus{position:absolute;z-index:5;left:61%;top:30%;padding:10px 12px;background:#fff;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.16);font-size:11px}.lotFocus b{display:block;font-size:13px}.toolbar{position:absolute;z-index:5;right:18px;bottom:18px;display:flex;gap:8px}.tool{background:#fff;border-radius:12px;padding:11px 13px;font-size:11px;box-shadow:0 7px 20px rgba(0,0,0,.1)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{min-height:285px;border:1px solid rgba(255,255,255,.14);border-radius:26px;padding:28px;background:rgba(255,255,255,.045);display:flex;flex-direction:column;justify-content:space-between}.cardNum{font-size:10px;color:#a9bdb2;letter-spacing:.12em}.card h3{font-size:27px;letter-spacing:-.045em;margin:0 0 10px}.card p{color:#b9c9c0;font-size:13px;line-height:1.65;margin:0}
+.lotStory{display:grid;grid-template-columns:.8fr 1.2fr;gap:18px}.lotInfo{background:#fff;border-radius:28px;padding:34px;border:1px solid var(--line)}.lotInfo h3{font-size:40px;letter-spacing:-.055em;margin:18px 0 6px}.lotInfo p{color:var(--muted);line-height:1.6}.data{margin-top:34px;border-top:1px solid var(--line)}.row{display:flex;justify-content:space-between;padding:15px 0;border-bottom:1px solid var(--line);font-size:12px}.row span{color:var(--muted)}.corner{min-height:520px;border-radius:28px;position:relative;overflow:hidden;background:linear-gradient(#b8d2d8 0 43%,#8da574 43% 64%,#d5d0c6 64%)}.roadA{position:absolute;background:#777c7b;height:150px;left:-5%;right:-5%;bottom:-20px;transform:perspective(400px) rotateX(60deg)}.roadB{position:absolute;background:#858988;width:170px;height:480px;right:-20px;bottom:-80px;transform:rotate(22deg)}.cornerHouse{position:absolute;width:310px;height:175px;background:#f3f0e8;left:45%;top:42%;transform:translate(-50%,-50%);box-shadow:0 15px 28px rgba(0,0,0,.14)}.cornerHouse:before{content:"";position:absolute;right:18px;bottom:0;width:155px;height:95px;background:#303c37}.cornerHouse:after{content:"";position:absolute;left:26px;bottom:0;width:78px;height:100px;background:#c6b28e}.sign{position:absolute;z-index:3;left:48%;bottom:78px;background:var(--green);color:#fff;border-radius:12px;padding:11px 14px;font-size:11px;font-weight:800;box-shadow:0 9px 22px rgba(0,0,0,.2)}.cornerLabel{position:absolute;top:22px;left:22px;background:rgba(255,255,255,.9);padding:12px 15px;border-radius:14px;font-size:11px}.cornerLabel b{display:block;font-size:13px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:24px;overflow:hidden}.step{background:var(--bg);padding:28px;min-height:190px}.step span{font-size:10px;color:var(--muted)}.step b{display:block;font-size:19px;letter-spacing:-.035em;margin-top:58px}.step p{font-size:11px;color:var(--muted);line-height:1.5}
+.final{padding:155px 20px;text-align:center;background:#0b1e15;color:#fff}.final h2{max-width:920px;margin:16px auto 26px;font-size:clamp(50px,7vw,92px)}.final p{max-width:610px;margin:0 auto;color:#b8c9c0;line-height:1.7}.final .actions{justify-content:center;margin-top:35px}.final .pill{background:#fff;color:var(--ink)}footer{padding:25px 0;color:var(--muted);font-size:11px}
+.reveal{opacity:0;transform:translateY(22px);transition:.75s cubic-bezier(.2,.7,.2,1)}.reveal.on{opacity:1;transform:none}
+@media(max-width:900px){.heroGrid,.head,.lotStory{grid-template-columns:1fr}.aerial{height:560px}.cards{grid-template-columns:1fr}.app{grid-template-columns:1fr}.sidebar{display:none}.workspace{min-height:520px}.steps{grid-template-columns:1fr 1fr}.navright a:not(.pill){display:none}.stats{grid-template-columns:1fr 1fr}.stat:nth-child(2){border-right:0}}
+@media(max-width:560px){.container{width:calc(100% - 24px)}.hero{padding-top:110px}.aerial{height:470px;border-radius:25px}.stats{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr}.browserbar{display:none}.workspace{min-height:450px}section{padding:82px 0}.corner{min-height:450px}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="container navin">
+<div class="logo">Luar de Arcoverde<small>Colorado Empreendimentos</small></div>
+<nav class="navright"><a href="#visao">Visão</a><a href="#produto">Produto</a><a href="#lote">Lote</a><a class="pill" href="#produto">Ver experiência ↓</a></nav>
+</div></header>
+
+<main>
+<section class="hero">
+<div class="container">
+<div class="heroGrid">
+<div class="reveal"><div class="kicker">Experiência digital imobiliária</div><h1>Não mostre apenas o lote. Mostre onde a vida acontece.</h1><p class="lead">Uma experiência visual para transformar a planta do Luar de Arcoverde em uma apresentação clara, navegável e muito mais próxima da percepção real do comprador.</p><div class="actions"><a class="pill" href="#produto">Explorar experiência</a><a class="pill outline" href="#visao">Entender o conceito</a></div></div>
+<div class="aerial reveal">
+<div class="scene" id="heroScene"><div class="avenue av1"></div><div class="avenue av2"></div><div class="avenue av3"></div></div>
+<div class="floatcard fc2"><b>Mapa vivo</b><span>Planta + contexto visual</span></div>
+<div class="floatcard fc1"><b>Luar de Arcoverde</b><span>Visualização conceitual do empreendimento</span></div>
+</div>
+</div>
+<div class="stats reveal"><div class="stat"><b>01</b><span>Localizar o lote</span></div><div class="stat"><b>02</b><span>Entender a posição</span></div><div class="stat"><b>03</b><span>Visualizar o entorno</span></div><div class="stat"><b>04</b><span>Apresentar com confiança</span></div></div>
+</div>
+</section>
+
+<section id="visao" class="dark">
+<div class="container">
+<div class="head reveal"><div><div class="kicker">A visão</div><h2>Da planta técnica<br>à percepção real.</h2></div><p>O comprador normalmente precisa imaginar demais. A proposta é reduzir essa distância: preservar a implantação do projeto e acrescentar contexto visual para que ruas, esquinas, vizinhança e posição do lote sejam compreendidos em segundos.</p></div>
+<div class="cards">
+<article class="card reveal"><div class="cardNum">01 — FIDELIDADE</div><div><h3>A planta é a fonte de verdade.</h3><p>A camada visual parte da geometria do empreendimento. O objetivo não é redesenhar o projeto, mas torná-lo mais legível.</p></div></article>
+<article class="card reveal"><div class="cardNum">02 — CONTEXTO</div><div><h3>O lote deixa de ficar isolado.</h3><p>O cliente percebe ruas, esquinas, orientação, lotes vizinhos e ocupação, criando uma leitura espacial mais intuitiva.</p></div></article>
+<article class="card reveal"><div class="cardNum">03 — APRESENTAÇÃO</div><div><h3>Uma experiência à altura do produto.</h3><p>Visual contemporâneo, navegação simples e uma apresentação comercial pensada para celular, tablet e notebook.</p></div></article>
+</div>
+</div>
+</section>
+
+<section id="produto">
+<div class="container">
+<div class="head reveal"><div><div class="kicker">O produto</div><h2>Um mapa que<br>o cliente entende.</h2></div><p>Busca de lotes, disponibilidade, planta original e leitura visual do empreendimento reunidas em uma interface única.</p></div>
+<div class="browser reveal">
+<div class="browserbar"><i class="dot"></i><i class="dot"></i><i class="dot"></i><div class="address"></div></div>
+<div class="app">
+<aside class="sidebar"><div class="sideTitle">Localizar lote</div><div class="search">Buscar quadra ou lote...</div><div class="filters"><div class="filter">Todos <b>↗</b></div><div class="filter">Disponíveis <b>○</b></div><div class="filter">Vendidos <b>●</b></div><div class="filter">Planta original <b>⌘</b></div></div><div class="legend"><div><i style="background:#78956e"></i>Disponível</div><div><i style="background:#d0b48c"></i>Vendido</div><div><i style="background:#123e2d"></i>Selecionado</div></div></aside>
+<div class="workspace"><div class="scene" id="appScene"><div class="avenue av1"></div><div class="avenue av2"></div><div class="avenue av3"></div></div><div class="lotFocus"><b>Lote 23</b>Quadra selecionada • esquina</div><div class="toolbar"><div class="tool">Planta original</div><div class="tool">Ver lote</div></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="lote">
+<div class="container">
+<div class="head reveal"><div><div class="kicker">Exemplo de experiência</div><h2>O lote ganha<br>endereço visual.</h2></div><p>Ao selecionar um lote, a apresentação deve deixar claro exatamente onde ele está — inclusive quando sua principal característica é estar em uma esquina.</p></div>
+<div class="lotStory">
+<div class="lotInfo reveal"><div class="kicker">Lote selecionado</div><h3>Lote 23</h3><p>Exemplo conceitual de como as informações do lote podem ser apresentadas de forma objetiva antes da visualização pela rua.</p><div class="data"><div class="row"><span>Posição</span><b>Esquina</b></div><div class="row"><span>Referência</span><b>Planta original</b></div><div class="row"><span>Visualização</span><b>Rua + entorno</b></div><div class="row"><span>Status</span><b>Identificado no mapa</b></div></div></div>
+<div class="corner reveal"><div class="cornerLabel"><b>Visão pela rua</b>Representação conceitual</div><div class="cornerHouse"></div><div class="roadB"></div><div class="roadA"></div><div class="sign">LOTE 23</div></div>
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<div class="head reveal"><div><div class="kicker">Jornada</div><h2>Quatro passos.<br>Nenhuma dúvida.</h2></div><p>A tecnologia fica em segundo plano. O que aparece para o cliente é uma sequência simples para compreender o imóvel.</p></div>
+<div class="steps reveal"><div class="step"><span>01</span><b>Buscar</b><p>Digite o lote ou navegue pelo mapa.</p></div><div class="step"><span>02</span><b>Localizar</b><p>Veja sua posição exata na implantação.</p></div><div class="step"><span>03</span><b>Comparar</b><p>Alterne para a planta original quando quiser.</p></div><div class="step"><span>04</span><b>Visualizar</b><p>Entenda o lote e o entorno pela perspectiva da rua.</p></div></div>
+</div>
+</section>
+
+<section class="final"><div class="reveal"><div class="kicker">Luar de Arcoverde</div><h2>Uma apresentação imobiliária que começa no mapa e termina na imaginação do cliente.</h2><p>Clareza técnica para quem vende. Percepção espacial para quem compra. Uma experiência digital mais sofisticada para apresentar o empreendimento.</p><div class="actions"><a class="pill" href="#produto">Rever experiência ↑</a></div></div></section>
+</main>
+<footer><div class="container">Luar de Arcoverde • Colorado Empreendimentos • Apresentação digital</div></footer>
+
+<script>
+function populate(id,focus){
+ const s=document.getElementById(id), pts=[[8,9],[20,9],[32,9],[61,9],[73,9],[85,9],[8,24],[20,24],[32,24],[61,24],[73,24],[85,24],[8,65],[20,65],[32,65],[61,65],[73,65],[85,65],[8,80],[20,80],[32,80],[61,80],[73,80],[85,80]];
+ pts.forEach((p,i)=>{let d=document.createElement('div');d.className='plot';d.style.cssText=`left:${p[0]}%;top:${p[1]}%;width:10%;height:11%;${focus&&i===10?'background:#315e48;box-shadow:0 0 0 4px rgba(255,255,255,.8);':''}`;s.appendChild(d);
+ if(i%3!==1){let h=document.createElement('div');h.className='bld';h.style.cssText=`left:${p[0]+2}%;top:${p[1]+2}%;width:6.5%;height:7%;`;s.appendChild(h)}
+ if(i%6===0){let t=document.createElement('div');t.className='tree';t.style.cssText=`left:${p[0]+.5}%;top:${p[1]+1}%;`;s.appendChild(t)}
+ });
+ let pool=document.createElement('div');pool.className='pool';pool.style.cssText='left:38%;top:72%;width:8%;height:10%';s.appendChild(pool)
+}
+populate('heroScene',false);populate('appScene',true);
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('on')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
+</script>
+</body>
+</html>
